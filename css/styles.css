@@ -30,6 +30,7 @@ h1, h2, h3, h4, p, ul, li { margin: 0px;
 .link:hover {color: var(--brand-color); text-decoration-line: none; background-color: #FFFFFF}
 .link:focus { color: var(--brand-color); background-color: #FFFFFF}
 
+/*  __________________________Глобальні змінні_______________________________ */
 .container {    width: 1158px; 
     margin-left:  auto; 
     margin-right: auto;
@@ -46,7 +47,16 @@ img {
     height: auto;
 }
 
+:hover, :focus {
+    transition-property: background-color, transform, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+    
+}
+
 /* Хедер */
+
 .logo-web {color: var(--brand-color);}
 .logo  {color: var(--zagolovok);
     font-family: 'Raleway', sans-serif; 
@@ -505,7 +515,7 @@ display: block;}
     border-radius: 4px;
 }
 
-.close{ 
+.close-button { 
     position: absolute;
     right: 24px;
 
@@ -520,8 +530,16 @@ display: block;}
        
     cursor: pointer;
 }
-
+.close-button:hover, .close-button:focus {
+    color: #FFFFFF;
+    background-color: #404BBF;
+}
 .close-svg {
+    position: absolute;
+    left: 33.33%;
+    right: 33.33%;
+    top: 33.33%;
+    bottom: 33.33%;
     /* display: block; */
     width: 8px;
     height: 8px;
