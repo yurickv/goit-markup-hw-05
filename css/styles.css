@@ -46,7 +46,7 @@ img {
     height: auto;
 }
 
-/*#12 Хедер */
+/* Хедер */
 .logo-web {color: var(--brand-color);}
 .logo  {color: var(--zagolovok);
     font-family: 'Raleway', sans-serif; 
@@ -57,13 +57,27 @@ img {
 }
 
 .nav-div{ margin-left: 77px;}
-.nav-link {color: var(--zagolovok); 
+.nav-link {
+    display: inline-block;
+    position: relative;
+    color: var(--zagolovok); 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     padding-top: 24px;
     padding-bottom: 24px;
 }
+.nav-link.navigation-active::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+} 
+
 .auth-div{ margin-left: auto;}
 .auth-nav {
     font-size: 16px;
@@ -421,11 +435,11 @@ align-items: baseline;}
     margin-top: 0;
 
     color: var(--studio); 
+
     background-color: var(--brand-color);
     background-blend-mode: soft-light;
     mix-blend-mode: normal;
-    
-    
+        
     transform: translateY(+100%);
     transition: transform 250ms ease;
 }
@@ -463,7 +477,7 @@ display: block;}
 
 /* Modal window */
 .backdrop {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -494,17 +508,28 @@ display: block;}
 .close{ 
     position: absolute;
     right: 24px;
+
     width: 24px;
     height: 24px;
+    padding: 0;
+
     border-radius: 50%;
+    color: #000;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #000;
+       
     cursor: pointer;
 }
 
 .close-svg {
+    /* display: block; */
     width: 8px;
     height: 8px;
     fill: currentColor;
+    object-fit: fill;
+}
+.close-svg use {
+    width: 100%;
+    height: 100%;
+    
 }
