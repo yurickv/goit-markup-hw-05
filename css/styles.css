@@ -26,9 +26,12 @@ h1, h2, h3, h4, p, ul, li { margin: 0px;
 .logo-footer, .logo {text-decoration-line:none}
 .link {text-decoration-line:none; font-family: inherit;
     display: block;
+    transition-property:  color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link:hover {color: var(--brand-color); text-decoration-line: none; background-color: #FFFFFF}
-.link:focus { color: var(--brand-color); background-color: #FFFFFF}
+.link:hover, .link:focus {color: var(--brand-color);  background-color: #FFFFFF}
+
 
 /*  __________________________Глобальні змінні_______________________________ */
 .container {    width: 1158px; 
@@ -47,13 +50,6 @@ img {
     height: auto;
 }
 
-:hover, :focus {
-    transition-property: background-color, transform, color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
-    
-}
 
 /* Хедер */
 
@@ -155,9 +151,16 @@ header {box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     
     border-color: transparent;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;}
+    border-radius: 4px;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .sec-hero-button:hover { box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 4px;}
+    border-radius: 4px;
+    
+}
 .sec-hero-button:focus { background: #404BBF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -287,6 +290,11 @@ header {box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
 
     background-color: var(--brand-color);
     color: var(--studio);
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .social-link:hover, .social-link:focus  {
     background-color: #404BBF;
@@ -317,10 +325,15 @@ header {box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     background-color: #FFFFFF;
     color: #8E8F99;
     padding: 16px 32px;
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link:hover,  .customer-link:focus {
     color: var(--brand-color);
     border: 1px solid var(--brand-color);
+    
 }
 
 .customer-icon  { 
@@ -406,16 +419,21 @@ align-items: baseline;}
     letter-spacing: 0.04em;
     
     padding: 12px 24px;
+
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filtr-button:hover { background-color: #4D5AE5; color: #FFFFFF;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 4px;
-    border-color: transparent;}
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-color: transparent;
+}
 .filtr-button:focus {background-color: #4D5AE5; color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border-color: transparent;}
+    border-color: transparent;
+}
 .filtr-button.active {background-color: #4D5AE5; color: #FFFFFF;}
 
 
@@ -429,6 +447,10 @@ align-items: baseline;}
     display: block;
     color: var(--text);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portf-link:hover,  .portf-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
@@ -529,6 +551,10 @@ display: block;}
     border: 1px solid rgba(0, 0, 0, 0.1);
        
     cursor: pointer;
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-button:hover, .close-button:focus {
     color: #FFFFFF;
