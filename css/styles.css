@@ -487,8 +487,11 @@ display: block;}
     position: relative; 
     overflow: hidden;
 }
-.portfolio-progect-card:hover .portfolio-text {
-    transform: translateX(0);
+.portfolio-progect-card:hover .portfolio-text  {
+    transform: translateX(0);   
+}
+.portfolio-progect-card:focus .portfolio-text {
+    transform: translateX(0);   
 }
 
 .portfolio-works {
